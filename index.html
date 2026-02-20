@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liso Crédível - Protocolo de Cabelo Liso | Renata Omena</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --noite-elegante: #1A1A2E;
+            --dourado-quente: #D4A574;
+            --lavanda-suave: #E8E0F0;
+            --creme-natural: #F5F0EB;
+            --branco-puro: #FFFFFF;
+            --terracota: #8B6F5E;
+            --vermelho-suave: #C4444A;
+            --verde-confianca: #4A7C59;
+            --texto-escuro: #2D2B3D;
+            --texto-secundario: #6B7280;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--texto-escuro);
+            line-height: 1.6;
+            background: var(--branco-puro);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 0 120px;
+            }
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            line-height: 1.2;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--texto-escuro);
+        }
+
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 52px;
+                margin-bottom: 24px;
+            }
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--texto-escuro);
+        }
+
+        @media (min-width: 768px) {
+            h2 {
+                font-size: 36px;
+                margin-bottom: 32px;
+            }
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--texto-escuro);
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, var(--noite-elegante) 0%, #252740 100%);
+            color: var(--branco-puro);
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @media (min-width: 768px) {
+            .hero {
+                padding: 120px 0;
+            }
+        }
+
+        .hero h1 {
+            color: var(--branco-puro);
+            margin-bottom: 12px;
+        }
+
+        .hero-subheadline {
+            font-size: 16px;
+            color: var(--lavanda-suave);
+            margin-bottom: 40px;
+            line-height: 1.6;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (min-width: 768px) {
+            .hero-subheadline {
+                font-size: 18px;
+                margin-bottom: 60px;
+            }
+        }
+
+        .hero-img {
+            width: 100%;
+            max-width: 280px;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 20px;
+            border: 3px solid var(--dourado-quente);
+            margin: 0 auto 40px;
+            display: block;
+            box-shadow: 0 20px 40px rgba(212, 165, 116, 0.2);
+        }
+
+        @media (min-width: 768px) {
+            .hero-img {
+                max-width: 400px;
+                margin-bottom: 60px;
+            }
+        }
+
+        .cta-btn {
+            background: var(--verde-confianca);
+            color: var(--branco-puro);
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            max-width: 500px;
+            min-height: 56px;
+            box-shadow: 0 10px 25px rgba(74, 124, 89, 0.3);
+            transition: all 0.3s ease;
+            margin: 0 auto 16px;
+            display: block;
+        }
+
+        @media (min-width: 768px) {
+            .cta-btn {
+                width: 500px;
+            }
+        }
+
+        .cta-btn:hover {
+            background: #3a6649;
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(74, 124, 89, 0.4);
+        }
+
+        .micro-copy {
+            font-size: 14px;
+            color: var(--lavanda-suave);
+            margin-top: 24px;
+        }
+
+        .hero .micro-copy {
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* SECOES */
+        .secao {
+            padding: 60px 0;
+        }
+
+        @media (min-width: 768px) {
+            .secao {
+                padding: 96px 0;
+            }
+        }
+
+        .secao-alt {
+            background: var(--creme-natural);
+        }
+
+        .secao-destaque {
+            background: var(--noite-elegante);
+            color: var(--branco-puro);
+        }
+
+        .secao-destaque h2 {
+            color: var(--dourado-quente);
+        }
+
+        /* DOR - SECAO 2 */
+        .dor-lista {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin: 32px 0;
+        }
+
+        .dor-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 0;
+        }
+
+        .dor-icon {
+            color: var(--vermelho-suave);
+            font-size: 24px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .dor-texto {
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--texto-escuro);
+        }
+
+        .destaque-dado {
+            background: var(--branco-puro);
+            border: 2px solid var(--dourado-quente);
+            padding: 24px;
+            border-radius: 12px;
+            margin: 32px 0;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .destaque-dado strong {
+            color: var(--dourado-quente);
+            display: block;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        /* AGITACAO - SECAO 3 */
+        .cards-promises {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            margin: 32px 0;
+        }
+
+        @media (min-width: 768px) {
+            .cards-promises {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .promise-card {
+            background: var(--branco-puro);
+            border: 2px solid #E5E7EB;
+            border-radius: 12px;
+            padding: 24px;
+            position: relative;
+        }
+
+        .promise-card::before {
+            content: '✗';
+            position: absolute;
+            top: 12px;
+            right: 16px;
+            color: var(--vermelho-suave);
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .promise-card h3 {
+            margin-bottom: 8px;
+            color: var(--texto-escuro);
+        }
+
+        .promise-card p {
+            font-size: 14px;
+            color: var(--texto-secundario);
+        }
+
+        .texto-destaque {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--texto-escuro);
+            margin: 32px 0;
+            line-height: 1.4;
+            text-align: center;
+        }
+
+        /* VIRADA - SECAO 4 */
+        .passos {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            margin: 32px 0;
+        }
+
+        @media (min-width: 768px) {
+            .passos {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .passo-card {
+            text-align: center;
+            padding: 20px;
+            border-radius: 12px;
+            background: var(--branco-puro);
+        }
+
+        .passo-numero {
+            width: 60px;
+            height: 60px;
+            background: var(--dourado-quente);
+            color: var(--texto-escuro);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 28px;
+            margin: 0 auto 16px;
+        }
+
+        .passo-card h3 {
+            color: var(--texto-escuro);
+            margin-bottom: 12px;
+        }
+
+        .passo-card p {
+            font-size: 14px;
+            color: var(--texto-secundario);
+            line-height: 1.6;
+        }
+
+        /* MODULOS - SECAO 5 */
+        .modulos-lista {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin: 32px 0;
+        }
+
+        .modulo-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 20px;
+            background: var(--creme-natural);
+            border-radius: 12px;
+        }
+
+        .modulo-numero {
+            width: 50px;
+            height: 50px;
+            background: var(--dourado-quente);
+            color: var(--texto-escuro);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 22px;
+            flex-shrink: 0;
+        }
+
+        .modulo-conteudo h3 {
+            margin-bottom: 6px;
+        }
+
+        .modulo-conteudo p {
+            font-size: 14px;
+            color: var(--texto-secundario);
+        }
+
+        /* BONUS - SECAO 6 */
+        .bonus-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin: 32px 0;
+        }
+
+        @media (min-width: 768px) {
+            .bonus-cards {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .bonus-card {
+            background: rgba(212, 165, 116, 0.1);
+            border: 2px solid var(--dourado-quente);
+            border-radius: 12px;
+            padding: 24px;
+            color: var(--branco-puro);
+        }
+
+        .bonus-card h3 {
+            color: var(--dourado-quente);
+            margin-bottom: 12px;
+        }
+
+        .bonus-card p {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 16px;
+        }
+
+        .bonus-valor {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--dourado-quente);
+        }
+
+        /* SOCIAL PROOF - SECAO 7 */
+        .social-proof-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            margin: 32px 0;
+        }
+
+        @media (min-width: 768px) {
+            .social-proof-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .antes-depois {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        @media (min-width: 768px) {
+            .antes-depois {
+                flex-direction: row;
+                gap: 24px;
+            }
+        }
+
+        .antes-depois-img {
+            flex: 1;
+            position: relative;
+        }
+
+        .antes-depois-img img {
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .label-antes {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: rgba(212, 165, 116, 0.9);
+            color: var(--texto-escuro);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .label-depois {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: rgba(74, 124, 89, 0.9);
+            color: var(--branco-puro);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .depoimento {
+            background: var(--branco-puro);
+            border-left: 4px solid var(--dourado-quente);
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            line-height: 1.7;
+            font-style: italic;
+            margin: 24px 0;
+        }
+
+        .dados-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin: 24px 0;
+        }
+
+        @media (min-width: 768px) {
+            .dados-stats {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .stat-item {
+            background: var(--creme-natural);
+            padding: 16px 12px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--dourado-quente);
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--texto-secundario);
+        }
+
+        .rating {
+            text-align: center;
+            margin: 24px 0;
+        }
+
+        .stars {
+            font-size: 22px;
+            color: #F59E0B;
+            margin-right: 8px;
+        }
+
+        .rating-text {
+            font-size: 14px;
+            color: var(--texto-secundario);
+        }
+
+        /* PRECO - SECAO 8 */
+        .stack-valor {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 24px 0;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .stack-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 16px;
+            background: var(--creme-natural);
+            border-radius: 8px;
+        }
+
+        .preco-de {
+            color: var(--vermelho-suave);
+            text-decoration: line-through;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .preco-por {
+            font-family: 'Playfair Display', serif;
+            font-weight: 800;
+            font-size: 48px;
+            color: var(--dourado-quente);
+            margin: 20px 0;
+            line-height: 1;
+        }
+
+        @media (min-width: 768px) {
+            .preco-por {
+                font-size: 64px;
+            }
+        }
+
+        .preco-subtext {
+            font-size: 14px;
+            color: var(--texto-secundario);
+            margin-top: 8px;
+        }
+
+        .comparacao {
+            background: var(--creme-natural);
+            border: 2px solid var(--dourado-quente);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 24px 0;
+            font-weight: 500;
+        }
+
+        /* GARANTIA - SECAO 9 */
+        .garantia-bloco {
+            background: var(--branco-puro);
+            border: 2px solid var(--dourado-quente);
+            padding: 32px 24px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 24px 0;
+        }
+
+        .garantia-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .garantia-bloco h3 {
+            color: var(--dourado-quente);
+            margin-bottom: 12px;
+        }
+
+        .faq-container {
+            margin: 32px 0;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #E5E7EB;
+            padding: 20px 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--texto-escuro);
+            user-select: none;
+        }
+
+        .faq-chevron {
+            color: var(--texto-secundario);
+            transition: transform 0.2s ease;
+            font-size: 18px;
+        }
+
+        .faq-item.active .faq-chevron {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding-top: 0;
+            color: var(--texto-secundario);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 400px;
+            padding-top: 16px;
+        }
+
+        /* CTA FINAL - SECAO 10 */
+        .cta-final {
+            background: linear-gradient(135deg, var(--noite-elegante) 0%, #252740 100%);
+            color: var(--branco-puro);
+            padding: 60px 24px;
+            border-radius: 16px;
+            margin: 60px 0;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .cta-final {
+                padding: 80px 60px;
+                margin: 96px 0;
+            }
+        }
+
+        .cta-final h2 {
+            color: var(--branco-puro);
+            margin-bottom: 32px;
+        }
+
+        .opcoes-final {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin: 32px 0;
+        }
+
+        @media (min-width: 768px) {
+            .opcoes-final {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .opcao-card {
+            border: 2px solid #E5E7EB;
+            border-radius: 12px;
+            padding: 24px;
+            background: rgba(255,255,255,0.05);
+            color: var(--branco-puro);
+        }
+
+        .opcao-card.opcao-sim {
+            border-color: var(--dourado-quente);
+            background: rgba(212, 165, 116, 0.1);
+        }
+
+        .cta-btn-final {
+            background: var(--verde-confianca);
+            color: var(--branco-puro);
+            margin: 32px auto 0;
+        }
+
+        .escassez {
+            font-size: 14px;
+            color: var(--dourado-quente);
+            margin-top: 24px;
+            font-weight: 600;
+        }
+
+        .selos {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 24px;
+            font-size: 13px;
+            color: var(--lavanda-suave);
+            text-align: center;
+        }
+
+        .selo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--texto-escuro);
+            color: var(--branco-puro);
+            text-align: center;
+            padding: 40px 24px;
+            font-size: 12px;
+            margin-top: 60px;
+        }
+
+        footer a {
+            color: var(--dourado-quente);
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* RESPONSIVO */
+        @media (max-width: 767px) {
+            .container {
+                padding: 0 20px;
+            }
+        }
+
+        /* ANIMACOES */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .secao {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+    </style>
+</head>
+<body>
+    <!-- SECAO 1: HERO -->
+    <section class="hero">
+        <div class="container">
+            <h1>Seu Liso Crédível<br>Começa Agora</h1>
+            <p class="hero-subheadline">A rotina de 5 minutos que 169 mil mulheres já acompanham. Agora em protocolo completo.</p>
+            <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&h=400&fit=crop" alt="Renata - Cabelo Liso" class="hero-img">
+            <button class="cta-btn" onclick="scrollToCompra()">QUERO MEU LISO CRÉDÍVEL - R$ 67</button>
+            <p class="micro-copy">✅ 7 dias de garantia incondicional | ✅ Acesso imediato</p>
+        </div>
+    </section>
+
+    <!-- SECAO 2: DOR -->
+    <section class="secao secao-alt">
+        <div class="container">
+            <h2>Você conhece essa sensação?</h2>
+            <p style="font-size: 16px; color: var(--texto-secundario); margin-bottom: 24px; line-height: 1.7;">
+                Alisa o cabelo pra ficar apresentável no trabalho, no encontro, em qualquer lugar importante... mas no meio do dia o liso já era. E junto vem aquela voz: "Por que comigo é assim? Por que não aguenta nem um dia?"
+            </p>
+
+            <div class="dor-lista">
+                <div class="dor-item">
+                    <span class="dor-icon">✗</span>
+                    <div class="dor-texto"><strong>Gasta R$ 150+ no salão, dura 2 semanas.</strong> Depois volta ao zero e tudo recomeça.</div>
+                </div>
+                <div class="dor-item">
+                    <span class="dor-icon">✗</span>
+                    <div class="dor-texto"><strong>Compra reconstrução que não reconstrói.</strong> R$ 200 em um produto que promete milagre e entrega nada.</div>
+                </div>
+                <div class="dor-item">
+                    <span class="dor-icon">✗</span>
+                    <div class="dor-texto"><strong>Cada amiga fala uma coisa diferente.</strong> Cronograma, hidratação, selagem... qual é a fórmula mesmo?</div>
+                </div>
+                <div class="dor-item">
+                    <span class="dor-icon">✗</span>
+                    <div class="dor-texto"><strong>Olha no espelho e sente insegurança.</strong> Cabelo quebrado, ressecado, artificioso... não passa a imagem que você merecia passar.</div>
+                </div>
+                <div class="dor-item">
+                    <span class="dor-icon">✗</span>
+                    <div class="dor-texto"><strong>Evita chuva, vento, sair do ar-condicionado.</strong> Seu dia inteiro gira em torno de proteger um liso que não deveria ser frágil assim.</div>
+                </div>
+            </div>
+
+            <div class="destaque-dado">
+                <strong>85% das mulheres dizem que o cabelo influencia DIRETAMENTE na autoestima.</strong>
+                Fonte: Cosmetic Innovation (1.300+ mulheres entrevistadas)
+            </div>
+        </div>
+    </section>
+
+    <!-- SECAO 3: AGITACAO -->
+    <section class="secao">
+        <div class="container">
+            <h2>Por que nada que você tentou funcionou?</h2>
+            <p style="text-align: center; font-size: 18px; color: var(--vermelho-suave); font-weight: 600; margin-bottom: 32px;">Não é culpa sua.</p>
+
+            <div class="cards-promises">
+                <div class="promise-card">
+                    <h3>"Hidratação Profunda"</h3>
+                    <p>Aquela que o salão vende caro e dura... 3 dias?</p>
+                </div>
+                <div class="promise-card">
+                    <h3>"Reconstrução Capilar"</h3>
+                    <p>R$ 200 sem resultado. Pesado, oleoso, volta ao estado anterior.</p>
+                </div>
+                <div class="promise-card">
+                    <h3>"Óleo Milagroso"</h3>
+                    <p>Deixa o cabelo pesado, sem volume, piora a situação.</p>
+                </div>
+                <div class="promise-card">
+                    <h3>"Cronograma Capilar"</h3>
+                    <p>Tão complicado que você desiste na primeira semana.</p>
+                </div>
+            </div>
+
+            <div class="texto-destaque">
+                Todos atacam o SINTOMA.<br>Nenhum ataca a CAUSA.
+            </div>
+        </div>
+    </section>
+
+    <!-- SECAO 4: VIRADA -->
+    <section class="secao secao-alt">
+        <div class="container">
+            <h2>Eu era exatamente assim.</h2>
+            <p style="font-size: 16px; color: var(--texto-secundario); margin-bottom: 32px; line-height: 1.7;">
+                Gastei fortunas em salão. Comprei produto caro que prometia milagre e entregava frustração. Tentei receita caseira, cronograma capilar, marca importada... sempre o mesmo resultado. Cabelo bom por dois dias. Depois, de volta ao ponto zero.
+            </p>
+            <p style="font-size: 16px; color: var(--texto-secundario); margin-bottom: 32px; line-height: 1.7;">
+                Até que eu parei de ouvir o salão e comecei a ouvir o meu cabelo. E descobri que o problema nunca foi o cabelo. Era o MÉTODO.
+            </p>
+
+            <div class="passos">
+                <div class="passo-card">
+                    <div class="passo-numero">1</div>
+                    <h3>Higienizar</h3>
+                    <p>Remover o acúmulo que sufoca o fio. Pra poder respirar de novo.</p>
+                </div>
+                <div class="passo-card">
+                    <div class="passo-numero">2</div>
+                    <h3>Tratar</h3>
+                    <p>Nutrir de verdade, por dentro. Não só na superfície.</p>
+                </div>
+                <div class="passo-card">
+                    <div class="passo-numero">3</div>
+                    <h3>Proteger</h3>
+                    <p>Blindar antes da próxima progressiva. Pra durar de verdade.</p>
+                </div>
+            </div>
+
+            <div class="texto-destaque">
+                Resultado?<br><strong style="color: var(--dourado-quente); font-size: 24px;">Liso que dura. Cabelo que brilha. Segurança.</strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECAO 5: MODULOS -->
+    <section class="secao">
+        <div class="container">
+            <h2>O que você recebe no Liso Crédível</h2>
+
+            <div class="modulos-lista">
+                <div class="modulo-item">
+                    <div class="modulo-numero">1</div>
+                    <div class="modulo-conteudo">
+                        <h3>Diagnóstico Capilar</h3>
+                        <p>Descubra exatamente o tipo do seu cabelo e o que ele REALMENTE precisa antes de começar qualquer coisa.</p>
+                    </div>
+                </div>
+
+                <div class="modulo-item">
+                    <div class="modulo-numero">2</div>
+                    <div class="modulo-conteudo">
+                        <h3>Preparação do Fio</h3>
+                        <p>Limpeza profunda e desintoxicação capilar — o passo que 90% das mulheres pulam e que faz TODA a diferença.</p>
+                    </div>
+                </div>
+
+                <div class="modulo-item">
+                    <div class="modulo-numero">3</div>
+                    <div class="modulo-conteudo">
+                        <h3>O Protocolo Liso (Passo a Passo)</h3>
+                        <p>A técnica completa que EU uso pessoalmente, explicada em detalhes pra você replicar em casa. Sem enrolação.</p>
+                    </div>
+                </div>
+
+                <div class="modulo-item">
+                    <div class="modulo-numero">4</div>
+                    <div class="modulo-conteudo">
+                        <h3>Manutenção Diária</h3>
+                        <p>Como manter o liso por semanas sem chapinha todo dia e sem danificar o fio. A rotina de 5 minutos que funciona.</p>
+                    </div>
+                </div>
+
+                <div class="modulo-item">
+                    <div class="modulo-numero">5</div>
+                    <div class="modulo-conteudo">
+                        <h3>Blindagem Capilar</h3>
+                        <p>Proteção contra umidade, calor e os vilões do dia a dia que desfazem seu liso. Sua armadura de cabelo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECAO 6: BONUS -->
+    <section class="secao secao-destaque">
+        <div class="container">
+            <h2>+ 3 Bônus Exclusivos</h2>
+
+            <div class="bonus-cards">
+                <div class="bonus-card">
+                    <h3>🎁 Guia de Produtos Acessíveis</h3>
+                    <p>Lista completa de produtos que FUNCIONAM e cabem no bolso. Sem marca cara, sem frescura.</p>
+                    <div class="bonus-valor">Valor: R$ 37</div>
+                </div>
+
+                <div class="bonus-card">
+                    <h3>🎁 Protocolo SOS Emergência</h3>
+                    <p>Seu cabelo quebrou? Ficou ressecado? Esse protocolo salva. Em 48 horas você ve resultado.</p>
+                    <div class="bonus-valor">Valor: R$ 47</div>
+                </div>
+
+                <div class="bonus-card">
+                    <h3>🎁 Comunidade VIP Telegram</h3>
+                    <p>Grupo fechado onde eu respondo dúvidas, compartilho resultados, e você conecta com outras mulheres.</p>
+                    <div class="bonus-valor">Valor: R$ 97</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECAO 7: SOCIAL PROOF -->
+    <section class="secao secao-alt">
+        <div class="container">
+            <h2>O que as mulheres estão dizendo</h2>
+
+            <div class="social-proof-grid">
+                <div class="antes-depois">
+                    <div class="antes-depois-img">
+                        <img src="https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?w=400&h=400&fit=crop" alt="Antes">
+                        <span class="label-antes">ANTES</span>
+                    </div>
+                    <div class="antes-depois-img">
+                        <img src="https://images.unsplash.com/photo-1562599810-85b8b2c8e7a9?w=400&h=400&fit=crop" alt="Depois">
+                        <span class="label-depois">DEPOIS</span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="depoimento">
+                        <strong>"Esse não é um curso que eu criei e esqueci. É minha rotina. O protocolo que eu ensino é o mesmo que eu uso toda semana. Meu cabelo nunca esteve tão bom."</strong>
+                    </div>
+
+                    <div class="rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">4.8/5 — baseado em 150+ avaliações</span>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="text-align: center; margin-top: 40px;">Dados Reais</h3>
+            <div class="dados-stats">
+                <div class="stat-item">
+                    <div class="stat-number">71%</div>
+                    <div class="stat-label">das mulheres fazem hidratação</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">49%</div>
+                    <div class="stat-label">alisam regularmente</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">+300</div>
+                    <div class="stat-label">começaram este mês</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10</div>
+                    <div class="stat-label">vagas por dia</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECAO 8: PRECO -->
+    <section class="secao">
+        <div class="container">
+            <h2 style="text-align: center;">Quanto custa tudo isso?</h2>
+
+            <div style="text-align: center;">
+                <div class="stack-valor">
+                    <div class="stack-item" style="justify-content: center;">5 módulos completos</div>
+                    <div class="stack-item" style="justify-content: center;">+ 3 bônus exclusivos</div>
+                    <div class="stack-item" style="justify-content: center;">+ Comunidade VIP</div>
+                    <div class="stack-item" style="justify-content: center;">+ Acesso vitalício</div>
+                </div>
+
+                <div style="margin: 32px 0;">
+                    <div class="preco-de">De R$ 197</div>
+                    <div class="preco-por">R$ 67</div>
+                    <div class="preco-subtext">Uma vez. Acesso pra sempre.</div>
+                </div>
+
+                <div class="comparacao">
+                    💰 Menos que UMA ida ao salão. Mais resultado que um ano inteiro de tentativas.
+                </div>
+
+                <button class="cta-btn" id="compra" onclick="scrollToCompra()">COMPRAR AGORA — R$ 67</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECAO 9: GARANTIA + FAQ -->
+    <section class="secao secao-alt">
+        <div class="container">
+            <div class="garantia-bloco">
+                <div class="garantia-icon">🛡️</div>
+                <h3>Garantia Total de 7 Dias</h3>
+                <p>Se não gostar por QUALQUER motivo, devolvo 100%. Sem perguntas, sem desculpa.</p>
+            </div>
+
+            <h2 style="text-align: center; margin-top: 48px;">Dúvidas Frequentes</h2>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Funciona pra qualquer tipo de cabelo?</span>
+                        <span class="faq-chevron">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Sim. O Módulo 1 faz um diagnóstico do seu tipo de cabelo e adapta o protocolo pra você. Funciona pra cacheado, ondulado, misto e quimicamente tratado.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Quanto tempo demora pra ver resultado?</span>
+                        <span class="faq-chevron">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Em 7 dias você já percebe a diferença na textura e no brilho. O resultado completo vem em 30 dias seguindo o cronograma.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Preciso comprar produtos caros?</span>
+                        <span class="faq-chevron">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Não. O Bônus 1 tem uma lista de produtos acessíveis que você encontra em qualquer farmácia. Sem marca cara, sem frescura.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Como acesso o protocolo após a compra?</span>
+                        <span class="faq-chevron">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Acesso imediato. Assim que o pagamento é confirmado, você recebe o acesso no seu email. Em minutos você já pode começar.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>E se não funcionar pra mim?</span>
+                        <span class="faq-chevron">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Você tem 7 dias de garantia incondicional. Se por qualquer motivo não gostar, devolvemos 100% do seu dinheiro. Sem perguntas.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECAO 10: CTA FINAL -->
+    <section style="padding: 0;">
+        <div class="container">
+            <div class="cta-final">
+                <h2>Você tem duas opções agora:</h2>
+
+                <div class="opcoes-final">
+                    <div class="opcao-card">
+                        <strong style="font-size: 18px; display: block; margin-bottom: 12px;">❌ Continuar como está</strong>
+                        <p style="font-size: 15px;">Continuar no ciclo: alisar, quebrar, gastar, repetir... Mais um mês igual ao anterior. Mais frustração. Mais dinheiro jogado fora.</p>
+                    </div>
+                    <div class="opcao-card opcao-sim">
+                        <strong style="font-size: 18px; display: block; margin-bottom: 12px; color: var(--dourado-quente);">✓ Começar hoje</strong>
+                        <p style="font-size: 15px;">Investir R$ 67 e ter cabelo que te dá segurança, orgulho e confiança. Resultado em 30 dias. Garantia de 7 dias.</p>
+                    </div>
+                </div>
+
+                <button class="cta-btn cta-btn-final" onclick="scrollToCompra()">COMEÇAR AGORA — R$ 67</button>
+
+                <div class="escassez">
+                    ⏰ Hoje restam [X] vagas
+                </div>
+
+                <div class="selos">
+                    <div class="selo">🔒 Pagamento 100% seguro</div>
+                    <div class="selo">✅ 7 dias de garantia incondicional</div>
+                    <div class="selo">✅ Acesso imediato</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Protocolo Liso Crédível © 2026 | Renata Omena</p>
+        <p style="margin-top: 12px;">
+            <a href="#">Política de Privacidade</a> |
+            <a href="#">Termos de Uso</a> |
+            <a href="mailto:contato@lisocredivel.com">Contato</a>
+        </p>
+        <p style="margin-top: 12px; color: rgba(255,255,255,0.6);">Produto vendido pela plataforma Kiwify — ambiente seguro e criptografado.</p>
+    </footer>
+
+    <script>
+        function toggleFAQ(element) {
+            element.parentElement.classList.toggle('active');
+        }
+
+        function scrollToCompra() {
+            const element = document.getElementById('compra');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                alert('Link de Kiwify será adicionado aqui. Por favor, compartilhe o link do seu produto Kiwify.');
+            }
+        }
+    </script>
+</body>
+</html>
