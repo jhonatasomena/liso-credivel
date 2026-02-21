@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Protocolo Liso Credível | Renata Omena</title>
+    <title>Protocolo Liso Credível | O Visual de Alto Status</title>
     
-    <!-- Google Fonts: Luxury & Minimalist Mix -->
+    <!-- Premium Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,900;1,400;1,900&family=Inter:wght@200;400;600;800;900&display=swap" rel="stylesheet">
     
-    <!-- Libraries: Tailwind, GSAP, ScrollTrigger -->
+    <!-- Dynamic Engines -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -18,570 +18,427 @@
     <style>
         :root {
             --neon-purple: #A855F7;
-            --deep-purple: #6D28D9;
-            --purple-glow: rgba(168, 85, 247, 0.45);
+            --deep-black: #050505;
         }
         
         body { background-color: #000; color: #fff; font-family: 'Inter', sans-serif; overflow-x: hidden; }
-        h1, h2, h3, h4, .serif { font-family: 'Playfair Display', serif; }
+        h1, h2, h3, h4, .serif { font-family: 'Playfair Display', serif; letter-spacing: -0.02em; }
         
-        /* Glassmorphism V6: Ultra Translucent Deep Black */
-        .glass { 
-            background: rgba(8, 8, 8, 0.45); 
-            backdrop-filter: blur(30px); 
-            -webkit-backdrop-filter: blur(30px);
-            border: 1px solid rgba(168, 85, 247, 0.12); 
-            box-shadow: 0 12px 64px 0 rgba(0, 0, 0, 0.7);
-        }
-        
-        .purple-gradient { 
-            background: linear-gradient(135deg, #A855F7 0%, #E879F9 100%); 
-            -webkit-background-clip: text; 
-            -webkit-text-fill-color: transparent; 
-        }
-        
-        /* Dynamic Background Stack: Nano Banana / Veo3 Style */
-        .bg-stack {
+        /* Cinematic Layers */
+        .cinematic-bg {
             position: fixed;
             top: 0; left: 0;
             width: 100%; height: 100%;
-            z-index: -20;
-            overflow: hidden;
+            z-index: -100;
             background: #000;
         }
-        
-        .bg-video-container {
+
+        .video-layer {
             position: absolute;
             top: 0; left: 0;
             width: 100%; height: 100%;
-            opacity: 0.45;
-            filter: grayscale(20%) contrast(1.15) brightness(0.85);
-            transition: opacity 1s ease-in-out;
-        }
-        
-        .bg-video-container video {
-            width: 100%; height: 100%;
-            object-fit: cover;
-        }
-        
-        .bg-overlay-deep {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: radial-gradient(circle at 50% 50%, transparent 20%, rgba(0,0,0,0.9) 100%),
-                        linear-gradient(180deg, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,1) 100%);
+            opacity: 0.3;
+            filter: saturate(1.2) contrast(1.1) brightness(0.7);
         }
 
-        /* Buttons: High Fidelity / High Conversion */
-        .btn-liso { 
-            background: var(--neon-purple); 
-            color: #fff; 
-            transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 0 35px var(--purple-glow);
-            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        .video-layer video { width: 100%; height: 100%; object-fit: cover; }
+
+        .overlay-gradient {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0.8) 100%),
+                        linear-gradient(180deg, rgba(0,0,0,1) 0%, transparent 50%, rgba(0,0,0,1) 100%);
         }
-        .btn-liso:hover { 
-            transform: scale(1.06) translateY(-8px); 
-            box-shadow: 0 35px 70px var(--purple-glow); 
-            background: #C084FC;
+
+        /* Glassmorphism V7 - Ultra Premium */
+        .glass-v7 {
+            background: rgba(10, 10, 10, 0.4);
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
         }
+
+        .purple-glow-text {
+            background: linear-gradient(to bottom right, #fff 30%, #A855F7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Buttons & Animations */
+        .btn-cinematic {
+            background: #fff;
+            color: #000;
+            font-weight: 900;
+            letter-spacing: 0.3em;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            box-shadow: 0 0 40px rgba(168, 85, 247, 0.3);
+        }
+        .btn-cinematic:hover {
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 40px 80px rgba(168, 85, 247, 0.5);
+            letter-spacing: 0.4em;
+        }
+
+        .scroll-item { opacity: 0; transform: translateY(60px); }
         
-        .shine-v6::after {
+        /* Custom List Bullets */
+        .liso-list li { position: relative; padding-left: 2.5rem; margin-bottom: 1.5rem; }
+        .liso-list li::before {
             content: '';
             position: absolute;
-            top: -100%; left: -100%;
-            width: 300%; height: 300%;
-            background: linear-gradient(
-                45deg, 
-                transparent 45%, 
-                rgba(255,255,255,0.7) 50%, 
-                transparent 55%
-            );
-            transform: rotate(45deg);
-            animation: shine-loop 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+            left: 0; top: 0.6rem;
+            width: 1.2rem; height: 1px;
+            background: var(--neon-purple);
         }
 
-        @keyframes shine-loop {
-            0% { transform: translateX(-120%) translateY(-120%) rotate(45deg); }
-            25%, 100% { transform: translateX(120%) translateY(120%) rotate(45deg); }
-        }
-
-        .scroll-reveal { opacity: 0; transform: translateY(50px); }
-        .parallax-element { transition: transform 0.2s ease-out; }
-        
-        /* List Styling: No Em-Dashes */
-        .check-v6 li { position: relative; padding-left: 2.5rem; }
-        .check-v6 li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--neon-purple);
+        .price-tag {
+            font-size: 10rem;
             font-weight: 900;
-            font-size: 1.2rem;
-        }
-        
-        .cross-v6 li { position: relative; padding-left: 2.5rem; }
-        .cross-v6 li::before {
-            content: '✕';
-            position: absolute;
-            left: 0;
-            color: #ff4d4d;
-            font-weight: 900;
-            font-size: 1.2rem;
+            line-height: 1;
+            letter-spacing: -0.05em;
+            background: linear-gradient(180deg, #fff 0%, #333 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        /* Smooth Scroll */
-        html { scroll-behavior: smooth; }
-        
-        .module-item:hover {
-            background: rgba(168, 85, 247, 0.12);
-            transform: scale(1.02) translateX(15px);
-            border-color: var(--neon-purple);
-        }
-
-        /* Countdown Style */
-        .countdown-pill {
-            background: rgba(168, 85, 247, 0.1);
-            border: 1px solid rgba(168, 85, 247, 0.3);
-            color: #fff;
-            padding: 4px 12px;
-            border-radius: 99px;
-            font-family: monospace;
-            font-weight: 900;
+        /* Cursor Interaction Placeholder */
+        .glow-cursor {
+            position: fixed;
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(168, 85, 247, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: -50;
+            transform: translate(-50%, -50%);
         }
     </style>
 </head>
 <body class="antialiased selection:bg-purple-600 selection:text-white">
 
-    <!-- Background Dynamic Stack (Veo3/Nano Banana Placeholder - Vídeos de Mães/Rotina) -->
-    <div class="bg-stack">
-        <div class="bg-video-container" id="videoLayer1">
-            <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=1600">
-                <source src="https://player.vimeo.com/external/494247551.hd.mp4?s=d7e35b0b4b2c1b2c1b2c1b2c1b2c1b2c1b2c1b2c&profile_id=175" type="video/mp4">
+    <div class="glow-cursor" id="cursorGlow"></div>
+
+    <!-- Cinematic Background Stack -->
+    <div class="cinematic-bg">
+        <div class="video-layer">
+            <!-- Vídeo de Mães Reais / Rotina (Cinemático) -->
+            <video autoplay muted loop playsinline>
+                <source src="https://player.vimeo.com/external/517042566.hd.mp4?s=d7e35b0b4b2c1b2c1b2c1b2c1b2c1b2c1b2c1b2c&profile_id=175" type="video/mp4">
             </video>
         </div>
-        <div class="bg-overlay-deep"></div>
+        <div class="overlay-gradient"></div>
     </div>
 
-    <!-- Barra de Urgência (Hormozi / Lendário) -->
-    <div class="bg-purple-950 text-white py-3 text-center text-[10px] font-black uppercase tracking-[0.4em] fixed w-full z-[100] border-b border-purple-500/20 backdrop-blur-md">
-        ⚠️ Oferta de Lançamento expira em breve: <span id="timer" class="text-purple-400 countdown-pill">00:00:00</span>. APENAS R$ 67.
+    <!-- Header / Scarcity -->
+    <div class="fixed top-0 w-full z-[200] bg-black/50 backdrop-blur-md border-b border-white/5 py-4 px-8 flex justify-between items-center">
+        <span class="text-[10px] font-black tracking-[0.5em] text-purple-400 uppercase">Protocolo Liso Credível</span>
+        <div class="flex items-center gap-4">
+            <span class="text-[9px] font-bold text-gray-500 uppercase tracking-widest">Oferta Expira em:</span>
+            <span id="timer" class="text-xs font-black font-mono text-white bg-purple-900/40 px-3 py-1 rounded-full border border-purple-500/20">00:00:00</span>
+        </div>
     </div>
 
-    <!-- HERO SECTION: O PROTOCOLO DA CREDIBILIDADE -->
-    <section class="relative min-h-screen flex flex-col items-center justify-center px-6 pt-24 pb-20 text-center overflow-hidden">
+    <!-- HERO: O MANIFESTO DA AUTORIDADE -->
+    <section class="relative min-h-screen flex flex-col items-center justify-center px-6 pt-32 text-center">
         <div class="max-w-6xl relative z-10">
-            <span class="scroll-reveal text-purple-400 font-bold tracking-[0.6em] uppercase text-[12px] mb-12 block opacity-90 italic">A ENGENHARIA DO VISUAL DE ALTO STATUS.</span>
+            <span class="scroll-item text-purple-500 font-bold tracking-[0.6em] uppercase text-[12px] mb-12 block">A Matrix do Cabelo Perfeito</span>
             
-            <h1 class="scroll-reveal text-5xl md:text-[7.5rem] font-black mb-12 leading-[0.95] tracking-tighter">
-                PROTOCOLO <br>
-                <span class="purple-gradient serif italic">LISO CREDÍVEL.</span>
+            <h1 class="scroll-item text-6xl md:text-[8.5rem] font-black mb-12 leading-[0.9] tracking-tighter">
+                O VISUAL DA <br>
+                <span class="purple-glow-text italic">CREDIBILIDADE.</span>
             </h1>
 
-            <p class="scroll-reveal text-gray-300 text-xl md:text-3xl max-w-4xl mx-auto mb-16 leading-relaxed font-light">
-                O método de 5 minutos que liberta você da "escravidão" dos salões e reconstrói a credibilidade que sua rotina exige. <span class="text-white font-medium border-b-2 border-purple-500/60">Seja na escola dos filhos, no trabalho ou em casa, seu cabelo é sua maior arma de autoridade.</span>
+            <p class="scroll-item text-gray-300 text-xl md:text-3xl max-w-4xl mx-auto mb-20 leading-relaxed font-light">
+                O Protocolo de 5 minutos que reconstrói a sua autoridade visual enquanto você cuida do que realmente importa. <span class="text-white font-medium italic underline decoration-purple-600 underline-offset-8">A imagem que comunica controle, mesmo no caos da sua rotina real.</span>
             </p>
 
-            <div class="scroll-reveal flex flex-col items-center gap-12">
-                <a href="#oferta" class="btn-liso shine-v6 px-18 py-9 rounded-full font-black text-[13px] uppercase tracking-[0.4em] shadow-2xl">
-                    ATIVAR MINHA CREDIBILIDADE AGORA — R$ 67
+            <div class="scroll-item flex flex-col items-center gap-12">
+                <a href="#oferta" class="btn-cinematic px-20 py-9 rounded-full text-[13px] uppercase shadow-2xl">
+                    ATIVAR MINHA AUTORIDADE
                 </a>
-                <div class="flex flex-col md:flex-row items-center gap-8 text-gray-500 text-[12px] font-bold uppercase tracking-[0.3em] opacity-80">
-                    <div class="flex items-center gap-3"><span>169k MULHERES</span></div>
+                <div class="flex flex-col md:flex-row items-center gap-10 text-gray-500 text-[11px] font-black uppercase tracking-[0.3em] opacity-60">
+                    <span>169k Seguidoras</span>
                     <span class="hidden md:block w-1.5 h-1.5 bg-purple-900 rounded-full"></span>
-                    <div class="flex items-center gap-3"><span>+300 ALUNAS/MÊS</span></div>
+                    <span>+300 Alunas/Mês</span>
                     <span class="hidden md:block w-1.5 h-1.5 bg-purple-900 rounded-full"></span>
-                    <div class="flex items-center gap-3"><span>7 DIAS DE GARANTIA</span></div>
+                    <span>Satisfação Garantida</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- O CONCEITO DE CREDIBILIDADE: A VIDA REAL -->
-    <section class="py-48 px-6 relative">
+    <!-- O MANIFESTO: A VIDA REAL DA MULHER DE STATUS -->
+    <section class="py-60 px-6 relative">
         <div class="max-w-5xl mx-auto">
-            <div class="mb-40">
-                <span class="text-purple-500 font-bold tracking-[0.5em] uppercase text-[11px] mb-8 block">O QUE SEU CABELO DIZ ANTES DE VOCÊ FALAR.</span>
-                <h2 class="serif text-5xl md:text-8xl mb-16 leading-tight italic">Seu visual comunica controle ou caos. Qual mensagem você está passando hoje na porta da escola?</h2>
+            <div class="mb-48">
+                <span class="text-purple-500 font-bold tracking-[0.5em] uppercase text-[11px] mb-10 block">O PESO DO SEU VISUAL</span>
+                <h2 class="serif text-5xl md:text-8xl mb-20 leading-tight italic tracking-tighter">Antes de você abrir a boca, seu cabelo já contou a história do seu dia.</h2>
                 
-                <div class="space-y-16 text-gray-300 text-xl md:text-2xl leading-relaxed font-light">
-                    <p class="scroll-reveal">O despertador toca e começa a maratona. Você prepara o café, organiza os uniformes, confere as mochilas e corre contra o relógio. No meio dessa tempestade, você se olha no espelho e vê um cabelo opaco, quebrado, com aquele frizz que grita cansaço. Você sente que sua imagem não representa a mulher forte e dedicada que você realmente é.</p>
+                <div class="space-y-20 text-gray-400 text-2xl md:text-3xl leading-relaxed font-light">
+                    <p class="scroll-item">O despertador toca cedo. Começa a correria para arrumar os filhos, preparar as mochilas e garantir que ninguém chegue atrasado na escola. No meio dessa maratona, você se olha no espelho. O que você vê é um cabelo opaco, quebrado e sem vida. Aquela imagem silencia a mulher poderosa que você é por dentro.</p>
                     
-                    <p class="scroll-reveal">Um cabelo que não passa credibilidade silencia sua autoridade. Você evita encontros com outras mães. Você foge daquela foto de perfil no WhatsApp da empresa. Você se esconde atrás de um coque rápido porque não suporta a textura de palha deixada por químicas que prometeram milagres e entregaram frustração.</p>
+                    <p class="scroll-item">Você entra na reunião de pais ou no escritório sentindo que sua imagem comunica cansaço, não autoridade. Você evita prender o cabelo. Evita aquela foto espontânea. Você se sente sequestrada por uma rotina que não te deixa tempo para ser quem você deseja ser na frente do espelho.</p>
                     
-                    <p class="scroll-reveal text-white font-medium border-l-4 border-purple-600 pl-10 italic">O Protocolo Liso Credível foi desenhado para você. Para a mulher que não tem 40 minutos para gastar com chapinha toda manhã. Para a mulher que exige estar impecável em 5 minutos enquanto cuida de tudo o que importa. Sua imagem merece o respeito que você conquistou.</p>
+                    <p class="scroll-reveal text-white font-medium border-l-2 border-purple-500 pl-12 italic leading-relaxed">O Protocolo Liso Credível foi desenhado para a mulher real. Aquela que exige estar impecável em 5 minutos enquanto o mundo gira ao seu redor. É sobre recuperar o status que o caos tentou te roubar. É sobre ser admirada por quem você é e por como você se apresenta.</p>
                 </div>
             </div>
 
-            <!-- Cards de Impacto (Zero Travessões) -->
-            <div class="grid md:grid-cols-2 gap-10">
-                <div class="scroll-reveal glass p-16 rounded-[60px] border-purple-500/20">
-                    <span class="text-5xl mb-10 block">🏫</span>
-                    <h3 class="serif text-3xl mb-8 italic">A Realidade da Mãe</h3>
-                    <p class="text-gray-400 text-lg leading-relaxed font-light">A escola, o trabalho, o mercado e a casa exigem um visual que acompanhe sua velocidade. Credibilidade real é ter praticidade para brilhar em qualquer circunstância sem depender de agenda de salão.</p>
+            <!-- Efeitos de Interatividade Profunda -->
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="scroll-item glass-v7 p-20 rounded-[80px]">
+                    <span class="text-6xl mb-12 block italic">01.</span>
+                    <h3 class="serif text-4xl mb-8 italic">A Credibilidade no Dia a Dia</h3>
+                    <p class="text-gray-500 text-xl leading-relaxed font-light">Estar pronta para o trabalho ou para a escola dos filhos com a confiança de quem domina o próprio visual. Menos tempo no banheiro, mais presença no mundo real.</p>
                 </div>
-                <div class="scroll-reveal glass p-16 rounded-[60px] border-purple-500/20">
-                    <span class="text-5xl mb-10 block">🏦</span>
-                    <h3 class="serif text-3xl mb-8 italic">A Liberdade de Decisão</h3>
-                    <p class="text-gray-400 text-lg leading-relaxed font-light">O salão de beleza lucra com a sua falta de conhecimento. Eles vendem alívios temporários para dores permanentes. O Protocolo coloca o poder de volta nas suas mãos e o dinheiro de volta no seu bolso.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- AS 5 ARMADILHAS (DETALHAMENTO TOTAL ORIGINAL) -->
-    <section class="py-48 bg-purple-950/5 border-y border-purple-500/10 relative overflow-hidden">
-        <div class="container max-w-6xl mx-auto px-6 relative z-10">
-            <div class="text-center mb-32">
-                <span class="text-purple-400 font-bold tracking-[0.5em] uppercase text-[11px] mb-8 block">A ENGANAÇÃO DO MERCADO.</span>
-                <h2 class="serif text-6xl md:text-[6rem] mb-14 tracking-tighter leading-none italic">5 Armadilhas que Estão <br><span class="purple-gradient font-black">Destruindo Seu Brilho.</span></h2>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-10">
-                <div class="scroll-reveal glass p-12 rounded-[40px] hover:bg-purple-900/10 transition-all group">
-                    <h4 class="serif text-2xl mb-6 italic text-purple-300">A Armadilha do Salão</h4>
-                    <p class="text-gray-400 text-base leading-relaxed font-light">Gastos recorrentes de R$ 150 a R$ 300 em selagens que perdem o efeito após três lavagens. Você gasta até R$ 3.600 por ano e continua com o cabelo pedindo socorro.</p>
-                </div>
-                <div class="scroll-reveal glass p-12 rounded-[40px] hover:bg-purple-900/10 transition-all group">
-                    <h4 class="serif text-2xl mb-6 italic text-purple-300">Produtos "Milagrosos"</h4>
-                    <p class="text-gray-400 text-base leading-relaxed font-light">Máscaras luxuosas com promessas vazias. Sua prateleira virou um cemitério de embalagens que custaram caro e não resolveram a saúde real do seu fio capilar.</p>
-                </div>
-                <div class="scroll-reveal glass p-12 rounded-[40px] hover:bg-purple-900/10 transition-all group">
-                    <h4 class="serif text-2xl mb-6 italic text-purple-300">Insegurança Silenciosa</h4>
-                    <p class="text-gray-400 text-base leading-relaxed font-light">A fuga de eventos sociais e a recusa de fotos espontâneas. Quando você não confia no seu visual, sua postura encolhe e sua voz perde a força necessária para liderar.</p>
-                </div>
-                <div class="scroll-reveal glass p-12 rounded-[40px] hover:bg-purple-900/10 transition-all group">
-                    <h4 class="serif text-2xl mb-6 italic text-purple-300">Informação Contraditória</h4>
-                    <p class="text-gray-400 text-base leading-relaxed font-light">Cada amiga indica um produto e cada vídeo sugere um truque novo. Sem uma metodologia validada, você continua dando tiros no escuro e sacrificando a saúde dos fios.</p>
-                </div>
-                <div class="scroll-reveal glass p-12 rounded-[40px] hover:bg-purple-900/10 transition-all group">
-                    <h4 class="serif text-2xl mb-6 italic text-purple-300">Tempo Desperdiçado</h4>
-                    <p class="text-gray-400 text-base leading-relaxed font-light">Aquelas 15 horas mensais perdidas tentando "domar" o cabelo poderiam ser convertidas em descanso ou tempo de qualidade com sua família. Sua liberdade não tem preço.</p>
-                </div>
-                <div class="scroll-reveal glass p-12 rounded-[40px] border-purple-500/40 transition-all group bg-purple-900/10">
-                    <h4 class="serif text-2xl mb-6 italic text-white">Autoestima Destruída</h4>
-                    <p class="text-gray-200 text-base leading-relaxed font-medium">O maior prejuízo não é financeiro. É emocional. O espelho parou de refletir quem você é de verdade. Recupere agora o controle da sua imagem e da sua vida.</p>
+                <div class="scroll-item glass-v7 p-20 rounded-[80px]">
+                    <span class="text-6xl mb-12 block italic">02.</span>
+                    <h3 class="serif text-4xl mb-8 italic">O Fim da Loteria do Salão</h3>
+                    <p class="text-gray-500 text-xl leading-relaxed font-light">O salão de beleza lucra com a sua falta de tempo. O Protocolo te entrega o segredo da manutenção de elite usando o que você já tem. Economize fortunas e ganhe autonomia total.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- POR QUE NADA FUNCIONOU: A VERDADE EXPOSTA (ZERO TRAVESSÕES) -->
-    <section class="py-48 px-6 bg-black relative">
-        <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-32">
-                <h2 class="serif text-5xl md:text-[5rem] mb-10 leading-tight">Por que <span class="purple-gradient font-black">absolutamente nada</span> que você tentou funcionou?</h2>
-                <p class="text-gray-400 text-xl font-light">A indústria lucra bilhões com soluções que apenas silenciam os sintomas do seu cabelo.</p>
-            </div>
-
-            <div class="space-y-16">
-                <div class="scroll-reveal flex gap-10 items-start">
-                    <span class="text-purple-500 font-black text-3xl">✕</span>
-                    <div>
-                        <h4 class="font-bold text-2xl mb-4 italic">Hidratação Superficial de Prateleira</h4>
-                        <p class="text-gray-400 leading-relaxed italic font-light text-lg">As máscaras comerciais apenas encapam o fio com camadas de silicone pesado. Isso cria um brilho artificial que desaparece no dia seguinte, deixando a fibra ainda mais ressecada e frágil por baixo.</p>
-                    </div>
-                </div>
-                <div class="scroll-reveal flex gap-10 items-start">
-                    <span class="text-purple-500 font-black text-3xl">✕</span>
-                    <div>
-                        <h4 class="font-bold text-2xl mb-4 italic">Reconstruções de Salão sem Preparo</h4>
-                        <p class="text-gray-400 leading-relaxed italic font-light text-lg">Tentar reconstruir o cabelo sem o pilar da higienização estratégica é um desperdício de dinheiro. A queratina não consegue penetrar se o terreno não estiver devidamente limpo e receptivo.</p>
-                    </div>
-                </div>
-                <div class="scroll-reveal flex gap-10 items-start">
-                    <span class="text-purple-500 font-black text-3xl">✕</span>
-                    <div>
-                        <h4 class="font-bold text-2xl mb-4 italic">Cronogramas Complexos e Irreais</h4>
-                        <p class="text-gray-400 leading-relaxed italic font-light text-lg">Nenhuma mulher real consegue seguir tabelas exaustivas de cuidados diários por muito tempo. Você precisa de um método que respeite sua rotina, não de uma obrigação que te escravize ainda mais.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-32 text-center">
-                <p class="serif text-4xl italic">O segredo não está na marca do pote. <br><span class="purple-gradient font-black">Está na lógica cadenciada do Protocolo.</span></p>
-            </div>
-        </div>
-    </section>
-
-    <!-- RENATA OMENA: 169K SEGUIDORAS (HISTÓRIA COMPLETA) -->
-    <section class="py-48 bg-black relative">
-        <div class="container max-w-6xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-24 items-center">
-                <div class="scroll-reveal">
-                    <div class="relative inline-block">
-                        <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=700&h=900&fit=crop" class="rounded-[80px] parallax-element grayscale hover:grayscale-0 transition-all duration-1000">
-                        <div class="absolute -bottom-12 -right-12 glass p-12 rounded-[50px] border-purple-500/40">
-                            <span class="text-5xl font-black block purple-text leading-none">169K</span>
-                            <span class="text-[11px] font-bold uppercase tracking-[0.3em] text-gray-400">Vidas Transformadas</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="scroll-reveal">
-                    <span class="text-purple-500 font-bold tracking-[0.6em] uppercase text-[12px] mb-10 block">O ROSTO POR TRÁS DO MÉTODO.</span>
-                    <h2 class="serif text-6xl md:text-8xl mb-14 leading-tight tracking-tighter italic">Como eu recuperei minha credibilidade visual e impactei milhares.</h2>
-                    <div class="space-y-10 text-gray-300 text-xl font-light leading-relaxed">
-                        <p>Eu sou Renata Omena e vivi exatamente essa mesma luta. Meu cabelo era minha maior fonte de insegurança. Estava destruído por químicas sucessivas e eu gastava fortunas em busca de um brilho que não durava.</p>
-                        <p>Decidi estudar a engenharia capilar por conta própria. Desenvolvi um sistema que respeita o tempo da mulher real. Hoje, 169 mil mulheres acompanham meus resultados no Instagram porque eu provo que é possível ter um cabelo impecável gastando 5 minutos por dia.</p>
-                        <p class="text-white italic font-medium">O Protocolo Liso Credível não é apenas sobre vaidade. É sobre recuperar a força da sua imagem e a paz da sua rotina agitada com o que realmente funciona.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- OS 3 PILARES DO LISO CREDÍVEL (ZERO TRAVESSÕES) -->
-    <section class="py-48 px-6 bg-[#030303] border-y border-white/5">
-        <div class="max-w-6xl mx-auto">
+    <!-- OS 5 PILARES DA DESTRUIÇÃO (A VERDADE NU E CRUA) -->
+    <section class="py-60 bg-white/5 border-y border-white/5 relative">
+        <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-40">
-                <span class="text-purple-400 font-bold tracking-[0.5em] uppercase text-[12px] mb-8 block">A ESTRUTURA DA MUDANÇA.</span>
-                <h2 class="serif text-5xl md:text-[7rem] mb-10 leading-none italic">A Trindade do <br><span class="purple-gradient font-black">Liso Credível.</span></h2>
-                <p class="text-gray-500 text-xl font-light">Três pilares fundamentais para restaurar sua autoridade visual hoje mesmo.</p>
+                <span class="text-purple-400 font-bold tracking-[0.4em] uppercase text-[11px] mb-8 block">A ENGANAÇÃO ACABA HOJE.</span>
+                <h2 class="serif text-6xl md:text-[7rem] mb-12 tracking-tighter leading-none italic font-black">As 5 Armadilhas que <br><span class="purple-glow-text">Furtam sua Autoridade.</span></h2>
             </div>
 
             <div class="grid md:grid-cols-3 gap-12">
-                <div class="scroll-reveal glass p-14 rounded-[60px] border-purple-500/10 hover:border-purple-500/60 transition-all group module-item">
-                    <span class="w-20 h-20 rounded-full border border-purple-500/30 flex items-center justify-center mb-12 text-2xl font-bold group-hover:bg-purple-600 group-hover:text-white transition-all shadow-xl">01</span>
-                    <h3 class="serif text-4xl mb-8 italic">Higienizar</h3>
-                    <p class="text-gray-400 text-lg leading-relaxed font-light">A técnica de limpeza estratégica que remove metais pesados e silicones acumulados. É o reset necessário para que seu cabelo volte a respirar e aceitar nutrição real.</p>
+                <div class="scroll-item glass-v7 p-14 rounded-[60px] hover:bg-purple-900/10 transition-all">
+                    <h4 class="serif text-2xl mb-6 italic text-purple-400">A Prisão do Salão</h4>
+                    <p class="text-gray-400 text-base leading-relaxed font-light">Gastos contínuos de até R$ 3.600 anuais em procedimentos temporários. Você se torna refém de uma cadeira de cabeleireiro enquanto seu cabelo continua frágil por dentro.</p>
                 </div>
-                <div class="scroll-reveal glass p-14 rounded-[60px] border-purple-500/10 hover:border-purple-500/60 transition-all group module-item">
-                    <span class="w-20 h-20 rounded-full border border-purple-500/30 flex items-center justify-center mb-12 text-2xl font-bold group-hover:bg-purple-600 group-hover:text-white transition-all shadow-xl">02</span>
-                    <h3 class="serif text-4xl mb-8 italic">Tratar</h3>
-                    <p class="text-gray-400 text-lg leading-relaxed font-light">Infusão intracelular de lipídios e aminoácidos essenciais. Usamos ativos acessíveis que penetram na fibra capilar e recuperam o fio de dentro para fora sem maquiagens.</p>
+                <div class="scroll-item glass-v7 p-14 rounded-[60px] hover:bg-purple-900/10 transition-all">
+                    <h4 class="serif text-2xl mb-6 italic text-purple-400">Promessas de Prateleira</h4>
+                    <p class="text-gray-400 text-base leading-relaxed font-light">Máscaras de luxo que apenas encapam o fio com silicone pesado. O brilho é falso e desaparece na primeira lavagem, deixando o dano real cada vez mais profundo.</p>
                 </div>
-                <div class="scroll-reveal glass p-14 rounded-[60px] border-purple-500/10 hover:border-purple-500/60 transition-all group module-item">
-                    <span class="w-20 h-20 rounded-full border border-purple-500/30 flex items-center justify-center mb-12 text-2xl font-bold group-hover:bg-purple-600 group-hover:text-white transition-all shadow-xl">03</span>
-                    <h3 class="serif text-4xl mb-8 italic">Blindar</h3>
-                    <p class="text-gray-400 text-lg leading-relaxed font-light">A selagem técnica definitiva que protege seu cabelo da umidade e do calor. É o escudo que garante que seu brilho e seu liso durem por semanas inteiras na sua rotina.</p>
+                <div class="scroll-item glass-v7 p-14 rounded-[60px] hover:bg-purple-900/10 transition-all">
+                    <h4 class="serif text-2xl mb-6 italic text-purple-400">Insegurança Silenciosa</h4>
+                    <p class="text-gray-400 text-base leading-relaxed font-light">Quando você não confia no seu visual, sua voz perde o peso. Você evita fotos espontâneas com seus filhos e foge do espelho porque não se reconhece mais na palha seca.</p>
+                </div>
+                <div class="scroll-item glass-v7 p-14 rounded-[60px] hover:bg-purple-900/10 transition-all">
+                    <h4 class="serif text-2xl mb-6 italic text-purple-400">Caos de Informação</h4>
+                    <p class="text-gray-400 text-base leading-relaxed font-light">Dicas aleatórias que só pioram a situação. Sem um método lógico e validado por quem vive a mesma rotina, você continuará sacrificando a saúde dos seus fios.</p>
+                </div>
+                <div class="scroll-item glass-v7 p-14 rounded-[60px] hover:bg-purple-900/10 transition-all">
+                    <h4 class="serif text-2xl mb-6 italic text-purple-400">Roubo de Tempo</h4>
+                    <p class="text-gray-400 text-base leading-relaxed font-light">As horas perdidas tentando domar o frizz poderiam ser usadas para o seu descanso ou lazer. Sua liberdade visual é o seu ativo mais precioso na correria diária.</p>
+                </div>
+                <div class="scroll-item glass-v7 p-14 rounded-[60px] border-purple-500/40 bg-purple-950/20">
+                    <h4 class="serif text-2xl mb-6 italic text-white">Erosão da Autoestima</h4>
+                    <p class="text-gray-200 text-base leading-relaxed font-medium">O custo real não é o dinheiro, mas como você se sente. Recupere o status de quem domina a própria imagem e sinta o respeito voltar em cada olhar.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTEÚDO 100% INTEGRAL (MÓDULOS) -->
-    <section class="py-48 px-6">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-32">
-                <span class="text-purple-400 font-bold tracking-[0.4em] uppercase text-[11px] mb-8 block">DENTRO DA MATRIX.</span>
-                <h2 class="serif text-6xl font-bold italic">Os 5 Módulos da Sua Transformação.</h2>
+    <!-- A CIÊNCIA DO LISO CREDÍVEL: OS 3 PILARES -->
+    <section class="py-60 px-6 bg-[#030303]">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-48">
+                <span class="text-purple-500 font-bold tracking-[0.5em] uppercase text-[12px] mb-10 block">O MÉTODO INABALÁVEL.</span>
+                <h2 class="serif text-6xl md:text-[8rem] mb-12 leading-none italic font-black">A Trindade do <br><span class="purple-glow-text">Liso Credível.</span></h2>
+                <p class="text-gray-500 text-2xl font-light italic">Engenharia capilar aplicada à vida da mulher real.</p>
             </div>
 
-            <div class="space-y-8">
-                <div class="scroll-reveal glass p-14 rounded-[50px] flex flex-col md:flex-row gap-12 items-start md:items-center hover:bg-purple-900/10 transition-all group module-card border-l-4 border-l-purple-600">
-                    <div class="w-24 h-24 rounded-3xl bg-purple-950/40 flex items-center justify-center text-3xl font-black text-purple-400 flex-shrink-0">M1</div>
+            <div class="grid md:grid-cols-3 gap-16">
+                <div class="scroll-item glass-v7 p-16 rounded-[70px] border-purple-500/10 hover:border-purple-500/50 transition-all group">
+                    <span class="w-24 h-24 rounded-full border border-purple-500/30 flex items-center justify-center mb-12 text-3xl font-black group-hover:bg-purple-600 group-hover:text-white transition-all shadow-2xl">01</span>
+                    <h3 class="serif text-4xl mb-10 italic">Higienizar</h3>
+                    <p class="text-gray-400 text-xl leading-relaxed font-light">A limpeza estratégica que remove o sequestro de nutrientes. Preparamos o terreno removendo metais e silicones para que a mudança real aconteça agora.</p>
+                </div>
+                <div class="scroll-item glass-v7 p-16 rounded-[70px] border-purple-500/10 hover:border-purple-500/50 transition-all group">
+                    <span class="w-24 h-24 rounded-full border border-purple-500/30 flex items-center justify-center mb-12 text-3xl font-black group-hover:bg-purple-600 group-hover:text-white transition-all shadow-2xl">02</span>
+                    <h3 class="serif text-4xl mb-10 italic">Tratar</h3>
+                    <p class="text-gray-400 text-xl leading-relaxed font-light">Nutrição metabólica pura. Ativos acessíveis que penetram na fibra capilar e restauram a saúde do fio de dentro para fora, sem as mentiras da indústria.</p>
+                </div>
+                <div class="scroll-item glass-v7 p-16 rounded-[70px] border-purple-500/10 hover:border-purple-500/50 transition-all group">
+                    <span class="w-24 h-24 rounded-full border border-purple-500/30 flex items-center justify-center mb-12 text-3xl font-black group-hover:bg-purple-600 group-hover:text-white transition-all shadow-2xl">03</span>
+                    <h3 class="serif text-4xl mb-10 italic">Blindar</h3>
+                    <p class="text-gray-400 text-xl leading-relaxed font-light">O escudo definitivo contra a umidade. A selagem técnica que garante um liso impecável e um brilho absoluto durante toda a sua jornada agitada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OS 5 MÓDULOS (CONTEÚDO COMPLETO INTEGRAL) -->
+    <section class="py-60 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-40">
+                <span class="text-purple-400 font-bold tracking-[0.4em] uppercase text-[12px] mb-8 block">O MAPA DO SEU NOVO STATUS.</span>
+                <h2 class="serif text-6xl font-bold italic">O Conteúdo que vai Redefinir seu Visual.</h2>
+            </div>
+
+            <div class="space-y-10">
+                <div class="scroll-item glass-v7 p-16 rounded-[50px] flex flex-col md:flex-row gap-16 items-start md:items-center hover:bg-purple-900/10 transition-all border-l-8 border-l-purple-600">
+                    <div class="w-28 h-28 rounded-3xl bg-purple-950/40 flex items-center justify-center text-4xl font-black text-purple-400 flex-shrink-0">M1</div>
                     <div>
                         <h4 class="serif text-3xl mb-4 italic">Diagnóstico Capilar de Alta Precisão</h4>
-                        <p class="text-gray-400 text-lg leading-relaxed font-light">Entenda exatamente o que seu fio está pedindo antes de agir. Analisamos porosidade e elasticidade para parar de vez com o desperdício de dinheiro em produtos errados.</p>
+                        <p class="text-gray-400 text-xl leading-relaxed font-light">Pare de gastar dinheiro no escuro. Aprenda a ler o que seu fio exige em termos de porosidade e elasticidade para agir com autoridade e eficácia absoluta.</p>
                     </div>
                 </div>
-                <div class="scroll-reveal glass p-14 rounded-[50px] flex flex-col md:flex-row gap-12 items-start md:items-center hover:bg-purple-900/10 transition-all group module-card">
-                    <div class="w-24 h-24 rounded-3xl bg-purple-950/40 flex items-center justify-center text-3xl font-black text-purple-400 flex-shrink-0">M2</div>
+                <div class="scroll-item glass-v7 p-16 rounded-[50px] flex flex-col md:flex-row gap-16 items-start md:items-center hover:bg-purple-900/10 transition-all">
+                    <div class="w-28 h-28 rounded-3xl bg-purple-950/40 flex items-center justify-center text-4xl font-black text-purple-400 flex-shrink-0">M2</div>
                     <div>
                         <h4 class="serif text-3xl mb-4 italic">Limpeza Estratégica & Desintoxicação</h4>
-                        <p class="text-gray-400 text-lg leading-relaxed font-light">A técnica master de lavagem que abre as portas para a mudança. Livre seu cabelo de anos de acúmulo de impurezas e prepare o terreno para a beleza real.</p>
+                        <p class="text-gray-400 text-xl leading-relaxed font-light">A técnica master de lavagem que abre os caminhos para a nutrição real. Livre-se de anos de acúmulo de silicones em uma única aplicação estratégica.</p>
                     </div>
                 </div>
-                <div class="scroll-reveal glass p-14 rounded-[50px] flex flex-col md:flex-row gap-12 items-start md:items-center hover:bg-purple-900/10 transition-all group module-card">
-                    <div class="w-24 h-24 rounded-3xl bg-purple-950/40 flex items-center justify-center text-3xl font-black text-purple-400 flex-shrink-0">M3</div>
+                <div class="scroll-item glass-v7 p-16 rounded-[50px] flex flex-col md:flex-row gap-16 items-start md:items-center hover:bg-purple-900/10 transition-all">
+                    <div class="w-28 h-28 rounded-3xl bg-purple-950/40 flex items-center justify-center text-4xl font-black text-purple-400 flex-shrink-0">M3</div>
                     <div>
-                        <h4 class="serif text-3xl mb-4 italic">Nutrição Metabólica de Impacto</h4>
-                        <p class="text-gray-400 text-lg leading-relaxed font-light">O coração do tratamento que recupera a vida dos fios. Use ativos poderosos e acessíveis para ver uma diferença brutal na textura e no brilho em apenas sete dias.</p>
+                        <h4 class="serif text-3xl mb-4 italic">Nutrição Metabólica Invasiva</h4>
+                        <p class="text-gray-400 text-xl leading-relaxed font-light">O coração do método que restaura a vida dos fios. Use ativos poderosos e acessíveis para transformar a textura do seu cabelo em apenas sete dias de uso consciente.</p>
                     </div>
                 </div>
-                <div class="scroll-reveal glass p-14 rounded-[50px] flex flex-col md:flex-row gap-12 items-start md:items-center hover:bg-purple-900/10 transition-all group module-card">
-                    <div class="w-24 h-24 rounded-3xl bg-purple-950/40 flex items-center justify-center text-3xl font-black text-purple-400 flex-shrink-0">M4</div>
+                <div class="scroll-item glass-v7 p-16 rounded-[50px] flex flex-col md:flex-row gap-16 items-start md:items-center hover:bg-purple-900/10 transition-all">
+                    <div class="w-28 h-28 rounded-3xl bg-purple-950/40 flex items-center justify-center text-4xl font-black text-purple-400 flex-shrink-0">M4</div>
                     <div>
-                        <h4 class="serif text-3xl mb-4 italic">Blindagem e Proteção Inabalável</h4>
-                        <p class="text-gray-400 text-lg leading-relaxed font-light">Aprenda a criar o escudo definitivo contra a umidade e as ferramentas de calor. Garanta que seu liso e seu brilho permaneçam impecáveis independentemente do clima.</p>
+                        <h4 class="serif text-3xl mb-4 italic">Blindagem e Proteção Inviolável</h4>
+                        <p class="text-gray-400 text-xl leading-relaxed font-light">O escudo térmico e contra a umidade que garante a durabilidade do seu visual. Mantenha o brilho impecável independente do clima ou da sua correria diária.</p>
                     </div>
                 </div>
-                <div class="scroll-reveal glass p-14 rounded-[50px] flex flex-col md:flex-row gap-12 items-start md:items-center hover:bg-purple-900/10 transition-all group module-card border-r-4 border-r-purple-600">
-                    <div class="w-24 h-24 rounded-3xl bg-purple-950/40 flex items-center justify-center text-3xl font-black text-purple-400 flex-shrink-0">M5</div>
+                <div class="scroll-item glass-v7 p-16 rounded-[50px] flex flex-col md:flex-row gap-16 items-start md:items-center hover:bg-purple-900/10 transition-all border-r-8 border-r-purple-600">
+                    <div class="w-28 h-28 rounded-3xl bg-purple-950/40 flex items-center justify-center text-4xl font-black text-purple-400 flex-shrink-0">M5</div>
                     <div>
-                        <h4 class="serif text-3xl mb-4 italic">Rotina de Credibilidade em 5 Minutos</h4>
-                        <p class="text-gray-400 text-lg leading-relaxed font-light">O cronograma que respeita sua vida como mãe e profissional. Resultados máximos com o mínimo de esforço diário para quem não tem tempo a perder.</p>
+                        <h4 class="serif text-3xl mb-4 italic">Rotina de 5 Minutos de Alto Status</h4>
+                        <p class="text-gray-400 text-xl leading-relaxed font-light">O cronograma desenhado para a mulher que decide brilhar. Resultados máximos com o mínimo de esforço diário para quem não tem um segundo a perder no seu dia.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- BÔNUS (EMPILHAMENTO HORMOZI - ZERO TRAVESSÕES) -->
-    <section class="py-48 px-6 bg-black relative overflow-hidden">
-        <div class="max-w-6xl mx-auto relative z-10 text-center">
-            <h2 class="serif text-6xl md:text-8xl italic mb-12">O Arsenal da Sua Vantagem.</h2>
-            <p class="text-gray-500 text-2xl font-light mb-32">Ao agir agora, você recebe ferramentas que multiplicam o valor do seu investimento.</p>
+    <!-- BÔNUS: O EMPILHAMENTO DE VALOR (GRAND SLAM OFFER) -->
+    <section class="py-60 px-6 bg-black relative">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="serif text-6xl md:text-[9rem] italic mb-12 tracking-tighter">O Arsenal da sua Liberdade.</h2>
+            <p class="text-gray-500 text-3xl font-light mb-40">Ao agir agora, você recebe o empilhamento de valor que acelera seus resultados.</p>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="scroll-reveal glass p-12 rounded-[50px] border-purple-500/20 hover:border-purple-500/60 transition-all text-left">
-                    <span class="text-purple-400 font-black text-xs uppercase mb-8 block">Bônus 1</span>
-                    <h4 class="serif text-2xl mb-6 italic">Lista de Produtos Acessíveis</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-8 font-light">O guia dos 12 ativos de farmácia que custam menos de R$ 30 e entregam um resultado superior aos importados de luxo.</p>
-                    <span class="text-white font-bold text-[11px] uppercase tracking-widest">VALOR: <span class="line-through opacity-40">R$ 47</span> — <span class="text-purple-400">GRÁTIS</span></span>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 text-left">
+                <div class="scroll-item glass-v7 p-14 rounded-[60px] border-purple-500/20 hover:border-purple-500/60 transition-all">
+                    <span class="text-purple-400 font-black text-xs uppercase mb-10 block">Bônus 1</span>
+                    <h4 class="serif text-3xl mb-6 italic">Ativos Acessíveis de Elite</h4>
+                    <p class="text-gray-500 text-lg leading-relaxed mb-10 font-light italic">A lista dos 12 produtos que custam menos de R$ 30 e entregam um resultado superior aos de luxo.</p>
+                    <span class="text-white font-bold text-xs uppercase tracking-widest">VALOR: <span class="line-through opacity-40">R$ 47</span> — <span class="text-purple-400">GRÁTIS</span></span>
                 </div>
-                <div class="scroll-reveal glass p-12 rounded-[50px] border-purple-500/20 hover:border-purple-500/60 transition-all text-left">
-                    <span class="text-purple-400 font-black text-xs uppercase mb-8 block">Bônus 2</span>
-                    <h4 class="serif text-2xl mb-6 italic">Guia de Emergência Capilar</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-8 font-light">Como agir quando a correria ou um procedimento químico agridem seu cabelo. Tenha a solução na palma da mão para qualquer crise.</p>
-                    <span class="text-white font-bold text-[11px] uppercase tracking-widest">VALOR: <span class="line-through opacity-40">R$ 37</span> — <span class="text-purple-400">GRÁTIS</span></span>
+                <div class="scroll-item glass-v7 p-14 rounded-[60px] border-purple-500/20 hover:border-purple-500/60 transition-all">
+                    <span class="text-purple-400 font-black text-xs uppercase mb-10 block">Bônus 2</span>
+                    <h4 class="serif text-3xl mb-6 italic">Guia de Emergência Visual</h4>
+                    <p class="text-gray-500 text-lg leading-relaxed mb-10 font-light italic">Soluções imediatas para cabelos agredidos ou situações críticas de imagem em qualquer momento.</p>
+                    <span class="text-white font-bold text-xs uppercase tracking-widest">VALOR: <span class="line-through opacity-40">R$ 37</span> — <span class="text-purple-400">GRÁTIS</span></span>
                 </div>
-                <div class="scroll-reveal glass p-12 rounded-[50px] border-purple-500/20 hover:border-purple-500/60 transition-all text-left">
-                    <span class="text-purple-400 font-black text-xs uppercase mb-8 block">Bônus 3</span>
-                    <h4 class="serif text-2xl mb-6 italic">Cronograma Mensal Pronto</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-8 font-light">Não perca energia planejando. Basta abrir seu cronograma estratégico e saber exatamente o que fazer em cada um dos trinta dias.</p>
-                    <span class="text-white font-bold text-[11px] uppercase tracking-widest">VALOR: <span class="line-through opacity-40">R$ 27</span> — <span class="text-purple-400">GRÁTIS</span></span>
+                <div class="scroll-item glass-v7 p-14 rounded-[60px] border-purple-500/20 hover:border-purple-500/60 transition-all">
+                    <span class="text-purple-400 font-black text-xs uppercase mb-10 block">Bônus 3</span>
+                    <h4 class="serif text-3xl mb-6 italic">Cronograma de Status Pronto</h4>
+                    <p class="text-gray-500 text-lg leading-relaxed mb-10 font-light italic">Abra seu planejamento estratégico e saiba exatamente o que fazer em cada um dos seus trinta dias.</p>
+                    <span class="text-white font-bold text-xs uppercase tracking-widest">VALOR: <span class="line-through opacity-40">R$ 27</span> — <span class="text-purple-400">GRÁTIS</span></span>
                 </div>
-                <div class="scroll-reveal glass p-12 rounded-[50px] border-purple-500/20 hover:border-purple-500/60 transition-all text-left">
-                    <span class="text-purple-400 font-black text-xs uppercase mb-8 block">Bônus 4</span>
-                    <h4 class="serif text-2xl mb-6 italic">Receitas Secretas Testadas</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-8 font-light">As cinco misturas caseiras de alto impacto que eu e 169k mulheres usamos para garantir o brilho e a maciez de capa de revista.</p>
-                    <span class="text-white font-bold text-[11px] uppercase tracking-widest">VALOR: <span class="line-through opacity-40">R$ 37</span> — <span class="text-purple-400">GRÁTIS</span></span>
+                <div class="scroll-item glass-v7 p-14 rounded-[60px] border-purple-500/20 hover:border-purple-500/60 transition-all">
+                    <span class="text-purple-400 font-black text-xs uppercase mb-10 block">Bônus 4</span>
+                    <h4 class="serif text-3xl mb-6 italic">Receitas Secretas Validadas</h4>
+                    <p class="text-gray-500 text-lg leading-relaxed mb-10 font-light italic">Misturas poderosas que garantem o brilho de capa de revista usando o que você já tem à sua disposição.</p>
+                    <span class="text-white font-bold text-xs uppercase tracking-widest">VALOR: <span class="line-through opacity-40">R$ 37</span> — <span class="text-purple-400">GRÁTIS</span></span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PROVA SOCIAL: HISTÓRIAS REAIS (MÃES) -->
-    <section class="py-48 px-6">
+    <!-- PROVA SOCIAL: HISTÓRIAS DE MULHERES REAIS -->
+    <section class="py-60 px-6">
         <div class="max-w-6xl mx-auto text-center">
-            <h2 class="serif text-6xl md:text-8xl mb-32 italic">Quem Já Ativou a Credibilidade.</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
-                <div class="scroll-reveal glass p-12 rounded-[50px] italic text-gray-400 text-base leading-relaxed font-light text-left">
-                    "Minha vida de manhã era um caos absoluto. Agora levo as crianças na escola sentindo que estou no comando da minha imagem. O Protocolo me deu a paz que eu precisava."
-                    <span class="block mt-8 text-purple-400 font-bold not-italic text-[11px] tracking-widest uppercase">— Camila S. | Recife, PE</span>
+            <h2 class="serif text-6xl md:text-9xl mb-40 italic tracking-tighter">Quem Já Ativou o Novo Status.</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 text-left">
+                <div class="scroll-item glass-v7 p-14 rounded-[60px] italic text-gray-400 text-lg leading-relaxed font-light">
+                    "Minha vida de manhã era um estresse total. Agora levo meus filhos na escola me sentindo no comando da minha própria imagem. O Protocolo me deu o tempo e a confiança que eu precisava."
+                    <span class="block mt-10 text-purple-400 font-black text-[12px] tracking-[0.3em] uppercase not-italic">— Camila S. | Recife, PE</span>
                 </div>
-                <div class="scroll-reveal glass p-12 rounded-[50px] italic text-gray-400 text-base leading-relaxed font-light text-left">
-                    "Eu jogava fortunas no lixo com salões que não resolviam nada. Hoje eu economizo tempo e dinheiro e meu cabelo nunca teve tanto brilho e vida como agora."
-                    <span class="block mt-8 text-purple-400 font-bold not-italic text-[11px] tracking-widest uppercase">— Juliana M. | São Paulo, SP</span>
+                <div class="scroll-item glass-v7 p-14 rounded-[60px] italic text-gray-400 text-lg leading-relaxed font-light">
+                    "Eu jogava fortunas no lixo com tratamentos que não duravam. Hoje eu economizo dinheiro e meu cabelo tem uma saúde que eu nunca vi. Ter credibilidade é poder cuidar de si com inteligência."
+                    <span class="block mt-10 text-purple-400 font-black text-[12px] tracking-[0.3em] uppercase not-italic">— Juliana M. | São Paulo, SP</span>
                 </div>
-                <div class="scroll-reveal glass p-12 rounded-[50px] italic text-gray-400 text-base leading-relaxed font-light text-left">
-                    "Um método direto e sem enrolação para mulheres que trabalham e cuidam de tudo ao mesmo tempo. Foi a melhor decisão para minha autoconfiança profissional."
-                    <span class="block mt-8 text-purple-400 font-bold not-italic text-[11px] tracking-widest uppercase">— Fernanda L. | BH, MG</span>
+                <div class="scroll-item glass-v7 p-14 rounded-[60px] italic text-gray-400 text-lg leading-relaxed font-light">
+                    "Um método direto para mulheres que precisam de resultados práticos. Foi a melhor decisão que tomei este ano para a minha autoconfiança no ambiente de trabalho e fora dele."
+                    <span class="block mt-10 text-purple-400 font-black text-[12px] tracking-[0.3em] uppercase not-italic">— Fernanda L. | BH, MG</span>
                 </div>
-                <div class="scroll-reveal glass p-12 rounded-[50px] italic text-gray-400 text-base leading-relaxed font-light text-left">
-                    "Minha progressiva parou de 'vencer' tão rápido. Meu cabelo está encorpado e brilhoso como nunca esteve em anos de procedimentos agressivos. Obrigada Renata."
-                    <span class="block mt-8 text-purple-400 font-bold not-italic text-[11px] tracking-widest uppercase">— Patrícia R. | Curitiba, PR</span>
+                <div class="scroll-item glass-v7 p-14 rounded-[60px] italic text-gray-400 text-lg leading-relaxed font-light">
+                    "Meu cabelo parou de quebrar e o brilho é indescritível. A Renata provou que método supera qualquer produto caro de salão. Me sinto outra mulher agora."
+                    <span class="block mt-10 text-purple-400 font-black text-[12px] tracking-[0.3em] uppercase not-italic">— Patrícia R. | Curitiba, PR</span>
                 </div>
-            </div>
-            
-            <!-- Stats originais -->
-            <div class="mt-32 grid grid-cols-2 md:grid-cols-4 gap-12 text-center border-t border-white/10 pt-20">
-                <div><span class="text-5xl font-black block purple-text mb-4">169K</span><span class="text-[11px] uppercase tracking-widest text-gray-600">Seguidoras</span></div>
-                <div><span class="text-5xl font-black block purple-text mb-4">+300</span><span class="text-[11px] uppercase tracking-widest text-gray-600">Alunas / Mês</span></div>
-                <div><span class="text-5xl font-black block purple-text mb-4">4.8/5</span><span class="text-[11px] uppercase tracking-widest text-gray-600">Avaliação Média</span></div>
-                <div><span class="text-5xl font-black block purple-text mb-4">97%</span><span class="text-[11px] uppercase tracking-widest text-gray-600">Recomendam</span></div>
             </div>
         </div>
     </section>
 
-    <!-- COMPARAÇÃO DE PREÇO: O CUSTO DA FALTA DE MÉTODO -->
-    <section class="py-48 px-6 bg-white/5 border-y border-white/5">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="serif text-6xl mb-20 italic font-bold">O Custo Silencioso de Continuar sem um Método.</h2>
-            <div class="space-y-8 text-left mb-24 max-w-2xl mx-auto">
-                <p class="flex justify-between items-center text-gray-500 border-b border-white/5 pb-6 text-xl"><span>Ciclos de Salão (Anual)</span> <span class="text-red-500 font-bold">R$ 2.400,00</span></p>
-                <p class="flex justify-between items-center text-gray-500 border-b border-white/5 pb-6 text-xl"><span>Produtos "Mágicos" Inúteis</span> <span class="text-red-500 font-bold">R$ 1.200,00</span></p>
-                <p class="flex justify-between items-center text-gray-500 border-b border-white/5 pb-6 text-xl"><span>Sua Liberdade & Tempo</span> <span class="text-red-500 font-bold italic">VALOR INCALCULÁVEL</span></p>
-                <p class="flex justify-between items-center text-white font-black text-3xl pt-10 italic"><span>TOTAL ESTIMADO</span> <span>ATÉ R$ 9.600,00</span></p>
-            </div>
-            <p class="serif text-4xl italic">Seu Investimento no Protocolo: <span class="purple-gradient font-black">APENAS R$ 67,00.</span></p>
-            <p class="text-gray-600 text-[11px] mt-8 uppercase tracking-[0.3em] font-bold">Acesso Vitalício. Pagamento Único.</p>
-        </div>
-    </section>
-
-    <!-- OFERTA FINAL: O CHECKOUT DA DECISÃO (ZERO TRAVESSÕES) -->
-    <section id="oferta" class="py-48 relative overflow-hidden">
-        <div class="absolute inset-0 bg-white z-0"></div>
-        <div class="max-w-6xl mx-auto px-6 relative z-10 text-black">
-            <div class="flex flex-col lg:flex-row gap-24 items-center">
-                <div class="lg:w-1/2">
-                    <span class="text-purple-600 font-black tracking-widest text-[12px] uppercase mb-10 block">Uma Escolha Pela Sua Imagem</span>
-                    <h2 class="serif text-6xl md:text-[6.5rem] font-black mb-12 leading-[0.9] tracking-tighter italic">Credibilidade é um Direito Seu.</h2>
-                    <ul class="check-v6 space-y-6 text-gray-700 text-lg font-medium mb-16">
-                        <li>Protocolo Completo em 5 Módulos em Vídeo</li>
-                        <li>Arsenal de Bônus (R$ 148 de Valor Inclusos)</li>
-                        <li>Acesso Vitalício às Próximas Atualizações</li>
-                        <li>Garantia Incondicional de 7 Dias Completos</li>
+    <!-- OFERTA FINAL: O CHECKOUT DA AUTORIDADE (GRAND SLAM OFFER) -->
+    <section id="oferta" class="py-60 relative overflow-hidden bg-white text-black">
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row gap-28 items-center">
+                <div class="lg:w-1/2 text-left">
+                    <span class="text-purple-600 font-black tracking-widest text-[14px] uppercase mb-12 block italic">A Escolha Mais Lógica da Sua Vida.</span>
+                    <h2 class="serif text-6xl md:text-[8rem] font-black mb-14 leading-[0.85] tracking-tighter italic">O Status da Credibilidade é Seu por Direito.</h2>
+                    <ul class="liso-list space-y-8 text-gray-700 text-xl font-medium mb-16 italic">
+                        <li>Protocolo Master Completo em 5 Módulos em Vídeo de Alta Qualidade</li>
+                        <li>Arsenal de 4 Bônus Estratégicos (R$ 148 de Valor Inclusos)</li>
+                        <li>Acesso Vitalício Garantido e Todas as Próximas Atualizações</li>
+                        <li>Garantia Incondicional de Sete Dias de Satisfação Plena</li>
                     </ul>
                 </div>
-                <div class="lg:w-1/2 glass bg-gray-50 p-20 rounded-[80px] text-center border-4 border-purple-600/10 shadow-3xl">
-                    <span class="text-gray-400 line-through text-2xl block mb-6 font-bold">De R$ 197 por apenas:</span>
-                    <span class="text-[9rem] md:text-[13rem] font-black block tracking-tighter leading-none mb-12 italic purple-text">R$ 67</span>
-                    <a href="https://pay.hotmart.com/YOUR_LINK" class="inline-block bg-purple-600 text-white px-20 py-10 rounded-full font-black text-sm uppercase tracking-[0.5em] hover:scale-105 transition-all mb-10 shadow-2xl shine-v6">
+                <div class="lg:w-1/2 glass bg-gray-50 p-24 rounded-[100px] text-center border-4 border-purple-600/10 shadow-3xl">
+                    <span class="text-gray-400 line-through text-3xl block mb-8 font-black">De R$ 197 por apenas:</span>
+                    <span class="price-tag mb-14 block italic purple-glow-text">R$ 67</span>
+                    <a href="https://pay.hotmart.com/YOUR_LINK" class="inline-block bg-purple-600 text-white px-24 py-12 rounded-full font-black text-sm uppercase tracking-[0.5em] hover:scale-105 transition-all mb-12 shadow-2xl shine-v6">
                         QUERO O PROTOCOLO
                     </a>
-                    <p class="text-gray-400 text-[12px] font-black uppercase tracking-widest opacity-80">SATISFAÇÃO GARANTIDA OU SEU DINHEIRO DE VOLTA.</p>
+                    <p class="text-gray-400 text-[14px] font-black uppercase tracking-[0.4em] opacity-90 italic">RISCO ZERO. RESULTADO GARANTIDO.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ (ZERO TRAVESSÕES) -->
-    <section class="py-48 px-6 bg-black">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="serif text-5xl mb-24 italic">Dúvidas que Libertam.</h2>
-            <div class="space-y-12 text-left">
-                <div class="scroll-reveal border-b border-white/5 pb-12 group">
-                    <h4 class="font-bold text-2xl mb-6 text-purple-400 italic">Funciona mesmo para quem tem filhos e vida corrida?</h4>
-                    <p class="text-gray-500 text-lg font-light italic leading-relaxed">Com certeza. O protocolo foi desenhado para ser executado em 5 minutos. Ele se encaixa perfeitamente entre levar os filhos na escola e começar sua jornada de trabalho diária.</p>
-                </div>
-                <div class="scroll-reveal border-b border-white/5 pb-12 group">
-                    <h4 class="font-bold text-2xl mb-6 text-purple-400 italic">Preciso comprar produtos importados de alto custo?</h4>
-                    <p class="text-gray-500 text-lg font-light italic leading-relaxed">Não é necessário. Todo o método foca em ativos acessíveis que você encontra em qualquer farmácia local por preços extremamente justos e honestos.</p>
-                </div>
-                <div class="scroll-reveal border-b border-white/5 pb-12 group">
-                    <h4 class="font-bold text-2xl mb-6 text-purple-400 italic">E se meu cabelo estiver em estado crítico?</h4>
-                    <p class="text-gray-500 text-lg font-light italic leading-relaxed">O Protocolo é focado na reconstrução profunda da fibra capilar. Quanto mais danificado estiver seu fio, mais impacto e transformação você sentirá logo nos primeiros sete dias.</p>
-                </div>
-                <div class="scroll-reveal border-b border-white/5 pb-12 group">
-                    <h4 class="font-bold text-2xl mb-6 text-purple-400 italic">O acesso ao conteúdo expira?</h4>
-                    <p class="text-gray-400 text-lg font-light italic leading-relaxed">Não expira. Você faz o investimento uma única vez e garante acesso vitalício para consultar o protocolo sempre que sua rotina exigir.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
+    <!-- FOOTER: CADÊNCIA FINAL -->
     <footer class="py-40 text-center bg-black border-t border-white/5 relative z-10">
-        <p class="text-gray-700 text-[12px] font-black uppercase tracking-[0.6em] mb-10 italic">Protocolo Liso Credível © 2026 | Renata Omena</p>
-        <div class="flex justify-center gap-16 text-[11px] font-black uppercase tracking-widest text-gray-800">
-            <a href="#" class="hover:text-purple-400 transition-all">Privacidade</a>
-            <a href="#" class="hover:text-purple-400 transition-all">Termos</a>
-            <a href="#" class="hover:text-purple-400 transition-all">Contato</a>
+        <p class="text-gray-700 text-[13px] font-black uppercase tracking-[0.7em] mb-12 italic">Protocolo Liso Credível © 2026 | Renata Omena</p>
+        <div class="flex justify-center gap-20 text-[12px] font-black uppercase tracking-widest text-gray-800">
+            <a href="#" class="hover:text-purple-400 transition-all italic">Privacidade</a>
+            <a href="#" class="hover:text-purple-400 transition-all italic">Termos</a>
+            <a href="#" class="hover:text-purple-400 transition-all italic">Contato</a>
         </div>
-        <p class="mt-16 text-[10px] text-gray-900 max-w-xl mx-auto leading-relaxed uppercase tracking-tighter">Este produto não promete milagres. A credibilidade do seu visual é o resultado direto da sua aplicação consciente do método apresentado.</p>
+        <p class="mt-20 text-[11px] text-gray-900 max-w-2xl mx-auto leading-relaxed uppercase tracking-tighter italic font-bold">O sucesso da sua imagem depende da sua dedicação em seguir o método apresentado com clareza e autoridade no seu dia a dia.</p>
     </footer>
 
-    <!-- INTERATIVIDADE JS (GSAP) -->
+    <!-- DYNAMIC ENGINE: INTERATIVIDADE V7 -->
     <script>
         gsap.registerPlugin(ScrollTrigger);
 
-        // Scroll Reveal Animations
-        document.querySelectorAll('.scroll-reveal').forEach((el) => {
+        // Cinematic Scroll Reveal
+        document.querySelectorAll('.scroll-item').forEach((el) => {
             gsap.to(el, {
                 scrollTrigger: {
                     trigger: el,
-                    start: "top 90%",
+                    start: "top 95%",
                     toggleActions: "play none none none"
                 },
                 opacity: 1,
                 y: 0,
-                duration: 1.8,
+                duration: 2.2,
                 ease: "power4.out"
             });
         });
 
-        // Mouse Parallax for High Fidelity Elements
+        // Deep Mouse Interaction
         document.addEventListener("mousemove", (e) => {
-            const x = (e.clientX / window.innerWidth - 0.5) * 25;
-            const y = (e.clientY / window.innerHeight - 0.5) * 25;
-            gsap.to(".parallax-element", { x: x, y: y, duration: 2.5, ease: "power3.out" });
+            const x = (e.clientX / window.innerWidth - 0.5) * 40;
+            const y = (e.clientY / window.innerHeight - 0.5) * 40;
+            gsap.to("#cursorGlow", { x: e.clientX, y: e.clientY, duration: 1.5, ease: "power2.out" });
+            gsap.to(".parallax-element", { x: x, y: y, duration: 3, ease: "power3.out" });
         });
 
-        // Countdown Timer Logic
+        // Countdown System
         function startTimer(duration, display) {
             var timer = duration, hours, minutes, seconds;
             setInterval(function () {
